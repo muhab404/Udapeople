@@ -142,6 +142,7 @@ jobs:
           command: |
             cd frontend
             npm install
+            npm audit fix
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 
@@ -207,7 +208,7 @@ jobs:
       - install_awscli
       - install_ansible
       - add_ssh_keys:
-          fingerprints: ["d5:a4:0d:bd:36:a7:d2:03:2c:10:93:6a:7c:d1:a7:26"]
+          fingerprints: ["31:53:4c:a3:09:32:88:3c:f7:a8:f2:d0:4f:e9:da:8a"]
       - attach_workspace:
           at: ~/
       - run:
